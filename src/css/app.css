@@ -1,0 +1,51 @@
+header {
+  background: url("../images/background.png") no-repeat;
+  background-size: cover;
+  background-color: #0b1a5b;
+}
+header .nav-section {
+  height: 75px;
+}
+header .logo-text {
+  font-family: "Myriad Pro";
+  color: white;
+  line-height: 0.948;
+  transform: matrix(0.066198871, 0, 0, 0.0664210511, 0, 0);
+  -moz-transform: matrix(0.066198871, 0, 0, 0.0664210511, 0, 0);
+  -webkit-transform: matrix(0.066198871, 0, 0, 0.0664210511, 0, 0);
+  -ms-transform: matrix(0.066198871, 0, 0, 0.0664210511, 0, 0);
+}
+header .logo {
+  position: relative;
+}
+header .logo .img-fluid {
+  position: relative;
+  bottom: 10px;
+  left: -10px;
+}
+header .logo:hover {
+  cursor: pointer;
+}
+header .logo:hover .logo-text {
+  background: #0dd8ee;
+  background: -moz-linear-gradient(left, #0dd8ee 0%, #601fb8 50%, #fd0147 100%);
+  background: -webkit-linear-gradient(left, #0dd8ee 0%, #601fb8 50%, #fd0147 100%);
+  background: linear-gradient(to right, #0dd8ee 0%, #601fb8 50%, #fd0147 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0dd8ee", endColorstr="#fd0147", GradientType=1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+header nav .nav {
+  font-size: 17.333px;
+  font-family: "MyriadPro";
+  line-height: 1.2;
+}
+header nav .nav .nav-link {
+  color: #ffffff;
+  font-size: 17.333px;
+  font-family: "MyriadPro";
+  line-height: 1.2;
+}
+
+/*# sourceMappingURL=app.css.map */
