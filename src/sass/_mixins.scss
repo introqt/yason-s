@@ -1,0 +1,16 @@
+@mixin underline() {
+
+    &:hover:after,
+    &:focus:after {
+        width: 100%;
+    }
+
+    &:after {
+        display: block;
+        content: "";
+        height: 2px;
+        width: 0%;
+        background-color: #ff4b82;
+        transition: width .2s ease-in-out;
+    }
+}
