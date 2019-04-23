@@ -21,5 +21,10 @@
 
 @font-face {
     font-family: 'TTPinesDEMO';
-    src: url('../fonts/TT\ Pines\ Bold\ Italic\ DEMO.otf')
+    src: url('../fonts/TT\ Pines\ Bold\ Italic\ DEMO.otf');
+}
+
+@font-face {
+    font-family: 'Oblivion';
+    src: url('../fonts/Oblivion_Personal\ Use\ Only.ttf');
 }

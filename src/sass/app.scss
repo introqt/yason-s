@@ -5,7 +5,7 @@ header {
     z-index: 1;
     font-family: "Myriad Pro";
     background: url('../images/background.png') no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
     height: 720px;
 
     .nav-section {
@@ -31,11 +31,18 @@ header {
             left: -10px;
         }
 
+        .logo-text {
+            font-family: 'Oblivion';
+            text-transform: lowercase;
+            font-size: 40px;
+            padding: 5px;
+        }
+
         &:hover {
             cursor: pointer;
 
             .logo-text {
-                background: #0dd8ee;
+                background-color: #0dd8ee;
                 background: -moz-linear-gradient(left, #0dd8ee 0%, #601fb8 50%, #fd0147 100%);
                 background: -webkit-linear-gradient(left, #0dd8ee 0%, #601fb8 50%, #fd0147 100%);
                 background: linear-gradient(to right, #0dd8ee 0%, #601fb8 50%, #fd0147 100%);
@@ -110,7 +117,7 @@ header {
     .laptop {
         position: absolute;
         right: -50px;
-        top: -150px;
+        top: -100px;
         width: 420px;
         height: 405px;
         background: url('../images/laptop.png') 100% 100% no-repeat;
@@ -129,6 +136,25 @@ header {
         background-image: -ms-linear-gradient(0deg, rgb(183, 37, 110) 0%, rgb(248, 99, 107) 100%);
         width: 208px;
         height: 60px;
+        color: white;
+        border-radius: 30px;
+        border: 0;
+        box-shadow: 0;
+        -webkit-transition: box-shadow .25s linear;
+        -moz-transition: box-shadow .25s linear;
+        -ms-transition: box-shadow .25s linear;
+        -o-transition: box-shadow .25s linear;
+        transition: box-shadow .25s linear;
+
+        &:focus,
+        &:active {
+            outline: 0;
+        }
+
+        &:hover {
+            box-shadow: 0px 0px 15px 5px rgb(248, 99, 107);
+            transition: .2s;
+        }
     }
 
 }
@@ -141,4 +167,5 @@ header {
     background-size: cover;
     height: 3000px;
     width: 100%;
+    padding-top: 700px;
 }
