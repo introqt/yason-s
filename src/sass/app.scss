@@ -168,4 +168,27 @@ header {
     height: 3000px;
     width: 100%;
     padding-top: 700px;
+
+    .why-we {
+        position: relative;
+
+        &--planet {
+            width: 129px;
+            height: 129px;
+            position: relative;
+            top: -15px;
+            right: -30px;
+        }
+
+        &--heading {
+            text-align: center;
+            font-size: 48px;
+            font-family: "TTPinesDEMO";
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            font-style: italic;
+            line-height: 1.2;
+            // margin: auto;
+        }
+    }
 }

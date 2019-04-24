@@ -148,5 +148,24 @@ header .order-button:hover {
   width: 100%;
   padding-top: 700px;
 }
+.bg-red .why-we {
+  position: relative;
+}
+.bg-red .why-we--planet {
+  width: 129px;
+  height: 129px;
+  position: relative;
+  top: -15px;
+  right: -30px;
+}
+.bg-red .why-we--heading {
+  text-align: center;
+  font-size: 48px;
+  font-family: "TTPinesDEMO";
+  color: white;
+  font-weight: bold;
+  font-style: italic;
+  line-height: 1.2;
+}
 
 /*# sourceMappingURL=app.css.map */
