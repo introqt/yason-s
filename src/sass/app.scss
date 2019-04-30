@@ -1,4 +1,10 @@
+@import 'variables';
+@import '../bootstrap/scss/bootstrap.scss';
 @import 'mixins';
+
+body {
+    position: relative;
+}
 
 header {
     position: relative;
@@ -34,7 +40,7 @@ header {
         .logo-text {
             font-family: 'Oblivion';
             text-transform: lowercase;
-            font-size: 40px;
+            font-size: 45px;
             padding: 5px;
         }
 
@@ -42,14 +48,7 @@ header {
             cursor: pointer;
 
             .logo-text {
-                background-color: #0dd8ee;
-                background: -moz-linear-gradient(left, #0dd8ee 0%, #601fb8 50%, #fd0147 100%);
-                background: -webkit-linear-gradient(left, #0dd8ee 0%, #601fb8 50%, #fd0147 100%);
-                background: linear-gradient(to right, #0dd8ee 0%, #601fb8 50%, #fd0147 100%);
-                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0dd8ee', endColorstr='#fd0147', GradientType=1);
-                background-clip: text;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
+                @include logoGradient();
             }
         }
     }
@@ -131,50 +130,28 @@ header {
     }
 
     .order-button {
-        background-image: -moz-linear-gradient(0deg, rgb(183, 37, 110) 0%, rgb(248, 99, 107) 100%);
-        background-image: -webkit-linear-gradient(0deg, rgb(183, 37, 110) 0%, rgb(248, 99, 107) 100%);
-        background-image: -ms-linear-gradient(0deg, rgb(183, 37, 110) 0%, rgb(248, 99, 107) 100%);
-        width: 208px;
-        height: 60px;
-        color: white;
-        border-radius: 30px;
-        border: 0;
-        box-shadow: 0;
-        -webkit-transition: box-shadow .25s linear;
-        -moz-transition: box-shadow .25s linear;
-        -ms-transition: box-shadow .25s linear;
-        -o-transition: box-shadow .25s linear;
-        transition: box-shadow .25s linear;
-
-        &:focus,
-        &:active {
-            outline: 0;
-        }
-
-        &:hover {
-            box-shadow: 0px 0px 15px 5px rgb(248, 99, 107);
-            transition: .2s;
-        }
+        @include gradient-button();
     }
 
 }
 
 .bg-red {
     position: absolute;
-    top: 45px;
+    top: 200px;
     z-index: 0;
-    background: url('../images/bg2.png') 100% 100% no-repeat;
+    background: url('../images/bg2.png') no-repeat;
     background-size: cover;
-    height: 3000px;
+    height: 3500px;
     width: 100%;
-    padding-top: 700px;
+    padding-top: 550px;
 
     .why-we {
         position: relative;
 
         &--planet {
-            width: 129px;
-            height: 129px;
+            // width: 129px;
+            // height: 129px;
+            width: 100%;
             position: relative;
             top: -15px;
             right: -30px;
@@ -189,6 +166,410 @@ header {
             font-style: italic;
             line-height: 1.2;
             // margin: auto;
+        }
+    }
+
+    .pluses {
+        padding-top: 20px;
+
+        &--block {
+            padding: 90px 75px 150px 25px;
+            color: white;
+            text-align: center;
+            width: 80%;
+
+            .heading {
+                font-size: 18.667px;
+                font-family: "Myriad Pro";
+                color: rgb(255, 255, 255);
+                font-weight: bold;
+                text-transform: uppercase;
+                line-height: 1.2;
+                text-align: center;
+            }
+
+            .text {
+                font-size: 12px;
+                padding-top: 30px;
+            }
+
+            &-1 {
+                height: 440px;
+                background: url('../images/why-we-1.png') no-repeat;
+                background-size: contain;
+            }
+
+            &-2 {
+                height: 440px;
+                margin-top: 80px;
+                background: url('../images/why-we-2.png') no-repeat;
+                // background-size: contain;
+            }
+
+            &-3 {
+                height: 440px;
+                background: url('../images/why-we-3.png') no-repeat;
+                background-size: contain;
+            }
+        }
+    }
+
+    .raketa {
+        position: absolute;
+        top: -200px;
+        left: -100px;
+        height: 400px;
+        background: url('../images/raketa.png') no-repeat;
+        background-size: contain;
+    }
+
+    .portfolio {
+        margin-top: 200px;
+
+        &-heading {
+            height: 250px;
+        }
+
+        &--heading {
+            position: relative;
+            display: block;
+            margin-left: 280px;
+            font-size: 48px;
+            font-family: "TTPinesDEMO";
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            font-style: italic;
+            line-height: 1.2;
+            text-align: center;
+        }
+
+        &--cosmonaute {
+            position: relative;
+            bottom: 160px;
+            left: 56px;
+            background: url('../images/cosmonaut.png') 100% 100% no-repeat;
+            background-size: contain;
+            height: 208px;
+            width: 468px;
+        }
+
+        &-part {
+            height: 481px;
+            width: 338px;
+            padding: 15px 15px 0 15px;
+            background-color: white;
+        }
+
+        &-image {
+            display: block;
+            margin: auto;
+            width: 100%;
+        }
+    }
+
+    .moon {
+        position: absolute;
+        width: 266px;
+        height: 255px;
+        left: -22%;
+        bottom: -11%;
+        background: url('../images/moon.png') 100% 100% no-repeat;
+        background-size: contain;
+    }
+
+    .mars {
+        position: absolute;
+        width: 156px;
+        height: 160px;
+        right: -15%;
+        bottom: 40%;
+        background: url('../images/mars.png') 100% 100% no-repeat;
+        background-size: contain;
+    }
+
+    .more-examples {
+        margin-top: 100px;
+
+        &-button {
+            display: block;
+            margin: auto;
+            font-family: "Myriad Pro";
+
+            @include gradient-button();
+        }
+    }
+
+    .socials {
+        margin-top: 200px;
+
+        .youtube-white-border {
+            width: 76%;
+            margin-left: 12%;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 50px;
+            border-radius: 50px 0 50px 0;
+            min-height: 220px;
+            box-shadow: inset 0 0 0 10px #fff;
+            color: white;
+
+            @include transition();
+
+            .youtube-icon {
+                @include transition();
+            }
+
+            &:focus,
+            &:hover {
+                text-decoration: none;
+                box-shadow: inset 0 0 0 14px #fff;
+
+                .youtube-icon {
+                    transform: scale(0.8, 0.8);
+                }
+            }
+
+            p {
+                font-size: 35.649px;
+                font-family: "Myriad Pro";
+                color: rgb(255, 255, 255);
+                font-weight: bold;
+                line-height: 1.122;
+                text-align: left;
+                -moz-transform: matrix(0.75738197198045, 0, 0, 0.75738197198045, 0, 0);
+                -webkit-transform: matrix(0.75738197198045, 0, 0, 0.75738197198045, 0, 0);
+                -ms-transform: matrix(0.75738197198045, 0, 0, 0.75738197198045, 0, 0);
+            }
+
+            .youtube-icon {
+                position: absolute;
+                left: 50%;
+                margin-left: -50px;
+                top: 50%;
+                margin-top: -50px;
+                z-index: 20;
+
+                @include transition();
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .youtube-cosmonaute {
+                position: absolute;
+                bottom: 0;
+                right: 14px;
+            }
+
+
+        }
+
+        .vk-how {
+            position: relative;
+            width: 76%;
+            margin-left: 12%;
+            display: flex;
+            align-items: center;
+
+            .bluelarge {
+                position: relative;
+                z-index: 20;
+                font-size: 72px;
+                font-family: "Myriad Pro";
+                color: rgb(123, 164, 234);
+                font-weight: bold;
+                line-height: 0.556;
+                margin: 0;
+            }
+
+            p {
+                font-family: "Myriad Pro";
+                position: relative;
+                font-size: 29.793px;
+                color: rgb(255, 255, 255);
+                line-height: 1.242;
+                margin-left: 15px;
+            }
+
+            .large-blue-but {
+                width: 223px;
+                height: 171px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                right: 0;
+                border-radius: 0 50px 0 50px;
+
+                @include transition();
+
+                &:hover {
+                    transform: scale(0.9, 0.9);
+                    box-shadow: 0 20px 40px rgba(123, 164, 234, 0.4);
+                }
+            }
+        }
+    }
+}
+
+.section-white {
+    position: absolute;
+    top: 3606px;
+    z-index: 1;
+    background: url(../images/white-bg.png) 85% no-repeat;
+    background-size: cover;
+    height: 1352px;
+    width: 100%;
+    padding-top: 290px;
+
+    .contact-us--heading {
+        font-size: 48px;
+        font-family: "TTPinesDEMO";
+        color: rgb(23, 45, 124);
+        font-weight: bold;
+        font-style: italic;
+        text-transform: uppercase;
+        line-height: 1.139;
+    }
+
+    .quoute {
+        text-align: right;
+    }
+
+    .quoute--frase {
+        display: inline-block;
+        font-size: 14.667px;
+        font-family: "MyriadPro";
+        color: rgba(0, 0, 0, 0.878);
+        line-height: 1.545;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .curly-brace {
+        font-size: 96px;
+        font-family: "MyriadPro";
+        color: rgb(23, 45, 124);
+        line-height: 1.2;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    form {
+        padding-top: 193px;
+        font-family: "Myriad Pro";
+        color: rgba(0, 0, 0, 0.749);
+
+        input,
+        .form-textarea {
+            padding: 5px 0;
+            width: 100%;
+            border: 0;
+            border-bottom: 2px solid grey;
+            margin-top: 45px;
+
+            @include transition(all, 0.1s);
+
+            &:focus {
+                outline: 0;
+                border-bottom: 2px solid #63a6f9;
+            }
+        }
+
+        .form-submit {
+            display: block;
+            margin: 50px auto;
+            width: 270px;
+            height: 60px;
+            background-image: -moz-linear-gradient(0deg, #0b1a5b 0%, #13266b 100%);
+            background-image: -webkit-linear-gradient(0deg, #0b1a5b 0%, #13266b 100%);
+            background-image: -ms-linear-gradient(0deg, #0b1a5b 0%, #13266b 100%);
+            text-transform: uppercase;
+            color: white;
+            border-radius: 30px;
+            border: 0;
+            box-shadow: 0;
+
+            @include transition(box-shadow);
+
+            &:focus,
+            &:active {
+                outline: 0;
+            }
+
+            &:hover {
+                cursor: pointer;
+                box-shadow: 0px 0px 15px 5px #13266b;
+                transition: .2s;
+            }
+        }
+    }
+}
+
+.footer {
+    font-family: "Myriad Pro";
+    position: relative;
+    bottom: -4250px;
+    background: url('../images/footer-bg.png') no-repeat;
+    background-size: cover;
+    z-index: 10;
+    height: 455px;
+    width: 100%;
+    padding-top: 125px;
+    color: white;
+
+    &--heading {
+        font-size: 17.333px;
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        line-height: 1.2;
+        text-align: left;
+        margin-bottom: 50px;
+    }
+
+    &-contacts {
+        margin-top: 75px;
+
+        &--contact {
+            display: inline-block;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+        display: block;
+        width: 100%;
+
+        &:focus,
+        &:hover {
+            outline: 0;
+        }
+    }
+
+    &-email-link {
+        margin-bottom: 10px;
+    }
+
+    &-logo {
+        text-align: center;
+        width: 100%;
+        display: block;
+
+        &-link i {
+            font-family: 'Oblivion';
+            text-transform: lowercase;
+            font-size: 60px;
+            padding: 5px;
+
+            @include logoGradient();
+        }
+
+        &-image {
+            display: block;
+            margin: auto;
         }
     }
 }

@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="./src/css/fonts.css">
-    <link rel="stylesheet" href="./src/css/bootstrap.min.css">
     <link rel="stylesheet" href="./src/css/app.css">
     <link rel="shortcut icon" href="./src/images/favicon.ico" type="image/png">
 
@@ -45,11 +44,15 @@
         </div>
         <section class="container">
             <div class="row space-above">
-                <h1 class="heading">Yason's workshop</h1>
-                <h2 class="subheading">Это опытная студия, которая состоит из профессиональных графических и видео
-                    дизайнеров. Мы поможем вам реализовать ваши идеи и прекрасные решения.</h2>
-                <img src="./src/images/cup.png" alt="Cup" class="cup">
-                <div class="laptop">&nbsp;</div>
+                <div class="heading-block col-8">
+                    <h1 class="heading">Yason's workshop</h1>
+                    <h2 class="subheading">Это опытная студия, которая состоит из профессиональных графических и видео
+                        дизайнеров. Мы поможем вам реализовать ваши идеи и прекрасные решения.</h2>
+                </div>
+                <div class="heading-animated-images col-4">
+                    <img src="./src/images/cup.png" alt="Cup" class="cup">
+                    <div class="laptop">&nbsp;</div>
+                </div>
             </div>
             <div class="row">
                 <button class="order-button">Оформить заказ</button>
@@ -60,13 +63,166 @@
     <section class="bg-red">
         <div class="container">
             <div class="row why-we justify-content-center">
-                <div class="col-2">
+                <div class="col-lg-2 col-sm-3">
                     <img src="./src/images/planet.png" alt="Why we" class="why-we--planet">
                 </div>
-                <h1 class="why-we--heading col-4">Почему<br>именно мы?</h1>
+                <div class="col-lg-4 col-sm-7">
+                    <h1 class="why-we--heading">Почему<br>именно мы?</h1>
+                </div>
+            </div>
+
+            <div class="row pluses">
+                <div class="col-4 pluses--block pluses--block-1">
+                    <h3 class="heading">Планирование работы</h3>
+                    <p class="text">Мы оптимально распределяем ресурсы для достижения ваших целей в кратчайшие сроки</p>
+                </div>
+                <div class="col-4 pluses--block pluses--block-2">
+                    <h3 class="heading">Лучшее качество</h3>
+                    <p class="text">Чтобы обеспечить наилучшее качество работы, мы используем современные методологии
+                    </p>
+                </div>
+                <div class="col-4 pluses--block pluses--block-3">
+                    <h3 class="heading">Доступные цены</h3>
+                    <p class="text">Для каждого проекта мы используем экономичные методы калькуляции затрат, что
+                        обеспечивает максимально точную и прозрачную стоимость
+                    </p>
+                </div>
+            </div>
+
+            <div class="row" style="position: relative;">
+                <div class="col-4 offset-8 raketa">&nbsp;</div>
+            </div>
+
+            <div class="row portfolio">
+                <div class="portfolio-heading col-5">
+                    <h3 class="portfolio--heading">Наши работы</h3>
+                    <div class="portfolio--cosmonaute">&nbsp;</div>
+                </div>
+            </div>
+
+            <div class="row portfolio-parts" style="position: relative">
+                <div class="portfolio-part col-4">
+                    <img src="./src/images/вар 1.png" alt="Portfolio example" class="portfolio-image">
+                </div>
+                <div class="portfolio-part col-4">
+                    <img src="./src/images/вар 1.png" alt="Portfolio example" class="portfolio-image">
+                </div>
+                <div class="portfolio-part col-4">
+                    <img src="./src/images/вар 1.png" alt="Portfolio example" class="portfolio-image">
+                </div>
+                <div class="portfolio-part col-4">
+                    <img src="./src/images/вар 1.png" alt="Portfolio example" class="portfolio-image">
+                </div>
+                <div class="portfolio-part col-4">
+                    <img src="./src/images/вар 1.png" alt="Portfolio example" class="portfolio-image">
+                </div>
+                <div class="portfolio-part col-4">
+                    <img src="./src/images/вар 1.png" alt="Portfolio example" class="portfolio-image">
+                </div>
+                <div class="moon">&nbsp;</div>
+                <div class="mars">&nbsp;</div>
+            </div>
+
+            <div class="row more-examples">
+                <button class="more-examples-button">Оформить заказ</button>
+            </div>
+        </div>
+
+        <div class="container socials">
+            <a target="_blank" href="https://www.youtube.com/channel/UCZ0XQth9pMmHF5GTOktvnEA"
+                class="youtube-white-border">
+                <p><strong>Ищите нас в космосе<br>и на Youtube</strong></p>
+                <div class="youtube-icon">
+                    <img src="./src/images/youtube.png" alt="Youtube" class="youtube-icon-image">
+                </div>
+                <div class="youtube-cosmonaute">
+                    <img src="./src/images/cosmonaut2.png" alt="Cosmonaute">
+                </div>
+            </a>
+            <div class="vk-how">
+                <p class="bluelarge">ИЛИ</p>
+                <p>в других<br>социальных сетях</p>
+                <a href="https://vk.com/webdesigns" data-fancybox="" class="large-blue-but"><img
+                        src="./src/images/vk_ico.png" alt="Vk"></a>
             </div>
         </div>
     </section>
+
+    <div class="section-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <h1 class="contact-us--heading">Заинтересовали наши услуги?</h1>
+                </div>
+                <div class="col-6 quoute">
+                    <span class="curly-brace">{</span>
+                    <p class="quoute--frase">Мы предлагаем полный спектр<br>услуг по гибкому ценообразованию<br>и
+                        превосходному обслуживанию</p>
+                    <span class="curly-brace">}</span>
+                </div>
+            </div>
+
+            <form action="#">
+                <div class="row">
+                    <div class="col-6">
+                        <input type="text" placeholder="Ваше имя" required="required">
+                    </div>
+                    <div class="col-6">
+                        <input type="email" placeholder="Адрес электронной почты" required="required">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <input type="text" placeholder="Услуги" required="required">
+                    </div>
+                    <div class="col-6">
+                        <input type="text" placeholder="Бюджет" required="required">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <input type="text" placeholder="Тема" required="required">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <textarea name="message" cols="30" rows="10" placeholder="Сообщение" class="form-textarea"
+                            required="required"></textarea>
+                    </div>
+                </div>
+
+                <button class="form-submit" type="submit">
+                    Отправить письмо
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-4 footer-contacts">
+                    <h4 class="footer-contacts--heading">Связь с нами:</h4>
+                    <a href="mailto:yasonsworkshop@gmail.com" class="footer-email-link">
+                        <img src="./src/images/letter.png" alt="Email me"> yasonsworkshop@gmail.com</a>
+
+                    <a href="https://api.whatsapp.com/send?phone=380933515355" class="footer-whatsapp-link">
+                        <img src="./src/images/whatsapp.png" alt="whatsapp">
+                        What's App</a>
+                </div>
+
+                <div class="col-4 footer-logo">
+                    <a class="navbar-brand footer-logo-link" href="#">
+                        <img src="./src/images/footer-logo.png" alt="Footer logo" class="footer-logo-image"><i>yason's</i></a>
+                </div>
+
+                <div class="col-4"></div>
+            </div>
+        </div>
+    </footer>
 
     <script src="./src/js/jquery.js"></script>
     <script src="./src/js/bootstrap.min.js"></script>
