@@ -8515,27 +8515,18 @@ header .order-button:hover {
 }
 .bg-red .portfolio-part {
   height: 481px;
-  width: 338px;
   padding: 15px 15px 0 15px;
   background-color: white;
-  -webkit-filter: grayscale(100%);
-  -moz-filter: grayscale(100%);
-  -ms-filter: grayscale(100%);
-  -o-filter: grayscale(100%);
-  filter: url(../images/grayscale.svg);
-  filter: grayscale(100%);
-  /* Firefox 4+ */
-  filter: gray;
-  /* IE 6-9 */
-  transition: all 0.2s ease-in-out;
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
 }
 .bg-red .portfolio-image {
   display: block;
   margin: auto;
   width: 100%;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
 }
 .bg-red .more-examples {
   margin-top: 100px;
@@ -8673,7 +8664,7 @@ header .order-button:hover {
 
 .bg-white {
   position: relative;
-  top: 320%;
+  top: 340%;
   z-index: 1;
   background: url(../images/white-bg.png) 85% no-repeat;
   background-size: cover;
@@ -8900,6 +8891,18 @@ header .order-button:hover {
   cursor: pointer;
   border-radius: 20px;
   font-size: 18px;
+}
+
+.grayscale {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: url(../images/grayscale.svg);
+  filter: grayscale(100%);
+  /* Firefox 4+ */
+  filter: gray;
+  /* IE 6-9 */
 }
 
 /*# sourceMappingURL=app.css.map */
