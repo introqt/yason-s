@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('layouts.app');
 });
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
