@@ -8346,8 +8346,8 @@ header .subheading {
 }
 header .laptop {
   position: absolute;
-  right: -50px;
-  top: -100px;
+  right: 0;
+  top: -70px;
   width: 420px;
   height: 405px;
   background: url("../images/laptop.png") 100% 100% no-repeat;
@@ -8355,8 +8355,12 @@ header .laptop {
 }
 header .cup {
   position: absolute;
-  top: -160px;
-  right: 300px;
+  right: 270px;
+  top: -150px;
+  width: 192px;
+  height: 286px;
+  background: url("../images/cup.png") 100% 100% no-repeat;
+  background-size: contain;
 }
 header .order-button {
   background-image: -moz-linear-gradient(0deg, #b7256e 0%, #f8636b 100%);
@@ -8390,19 +8394,39 @@ header .order-button:hover {
   z-index: 0;
   background: url("../images/bg2.png") no-repeat;
   background-size: cover;
-  height: 4000px;
+  height: 3800px;
   width: 100%;
   padding-top: 550px;
+}
+.bg-red .moon {
+  position: absolute;
+  z-index: 1;
+  width: 238px;
+  height: 238px;
+  left: 0;
+  bottom: 30%;
+  background: url("../images/moon.png") 100% 100% no-repeat;
+  background-size: contain;
+}
+.bg-red .mars {
+  position: absolute;
+  z-index: 1;
+  width: 156px;
+  height: 160px;
+  right: 90px;
+  bottom: 40%;
+  background: url("../images/mars.png") 100% 100% no-repeat;
+  background-size: contain;
 }
 .bg-red .why-we {
   position: relative;
   padding-top: 50px;
 }
 .bg-red .why-we--planet {
-  width: 100%;
-  position: relative;
-  top: -15px;
-  right: -30px;
+  width: 100px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 .bg-red .why-we--heading {
   text-align: center;
@@ -8461,6 +8485,10 @@ header .order-button:hover {
   margin-top: 200px;
   padding-top: 50px;
 }
+.bg-red .portfolio-parts {
+  position: relative;
+  z-index: 2;
+}
 .bg-red .portfolio-heading {
   height: 250px;
 }
@@ -8490,29 +8518,24 @@ header .order-button:hover {
   width: 338px;
   padding: 15px 15px 0 15px;
   background-color: white;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: url(../images/grayscale.svg);
+  filter: grayscale(100%);
+  /* Firefox 4+ */
+  filter: gray;
+  /* IE 6-9 */
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
 }
 .bg-red .portfolio-image {
   display: block;
   margin: auto;
   width: 100%;
-}
-.bg-red .moon {
-  position: absolute;
-  width: 266px;
-  height: 255px;
-  left: -22%;
-  bottom: -11%;
-  background: url("../images/moon.png") 100% 100% no-repeat;
-  background-size: contain;
-}
-.bg-red .mars {
-  position: absolute;
-  width: 156px;
-  height: 160px;
-  right: -15%;
-  bottom: 40%;
-  background: url("../images/mars.png") 100% 100% no-repeat;
-  background-size: contain;
 }
 .bg-red .more-examples {
   margin-top: 100px;
@@ -8648,17 +8671,17 @@ header .order-button:hover {
   box-shadow: 0 20px 40px rgba(123, 164, 234, 0.4);
 }
 
-.section-white {
+.bg-white {
   position: relative;
-  top: 480%;
+  top: 320%;
   z-index: 1;
   background: url(../images/white-bg.png) 85% no-repeat;
   background-size: cover;
-  height: 1352px;
+  height: 290px;
   width: 100%;
   padding-top: 290px;
 }
-.section-white .contact-us--heading {
+.bg-white .contact-us--heading {
   font-size: 48px;
   font-family: "TTPinesDEMO";
   color: #172d7c;
@@ -8667,10 +8690,10 @@ header .order-button:hover {
   text-transform: uppercase;
   line-height: 1.139;
 }
-.section-white .quoute {
+.bg-white .quoute {
   text-align: right;
 }
-.section-white .quoute--frase {
+.bg-white .quoute--frase {
   display: inline-block;
   font-size: 14.667px;
   font-family: "MyriadPro";
@@ -8679,7 +8702,7 @@ header .order-button:hover {
   text-align: left;
   font-weight: bold;
 }
-.section-white .curly-brace {
+.bg-white .curly-brace {
   font-size: 96px;
   font-family: "MyriadPro";
   color: #172d7c;
@@ -8687,12 +8710,12 @@ header .order-button:hover {
   text-align: center;
   font-weight: bold;
 }
-.section-white form {
+.bg-white form {
   padding-top: 100px;
   color: rgba(0, 0, 0, 0.749);
 }
-.section-white form input,
-.section-white form .form-textarea {
+.bg-white form input,
+.bg-white form .form-textarea {
   padding: 5px 0;
   width: 100%;
   border: 0;
@@ -8703,12 +8726,12 @@ header .order-button:hover {
   -o-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
 }
-.section-white form input:focus,
-.section-white form .form-textarea:focus {
+.bg-white form input:focus,
+.bg-white form .form-textarea:focus {
   outline: 0;
   border-bottom: 2px solid #63a6f9;
 }
-.section-white form .form-submit {
+.bg-white form .form-submit {
   display: block;
   margin: 50px auto;
   width: 270px;
@@ -8726,10 +8749,10 @@ header .order-button:hover {
   -o-transition: box-shadow 0.2s ease-in-out;
   -moz-transition: box-shadow 0.2s ease-in-out;
 }
-.section-white form .form-submit:focus, .section-white form .form-submit:active {
+.bg-white form .form-submit:focus, .bg-white form .form-submit:active {
   outline: 0;
 }
-.section-white form .form-submit:hover {
+.bg-white form .form-submit:hover {
   cursor: pointer;
   box-shadow: 0px 0px 15px 5px #13266b;
   transition: 0.2s;

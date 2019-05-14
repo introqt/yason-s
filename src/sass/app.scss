@@ -114,8 +114,8 @@ header {
 
     .laptop {
         position: absolute;
-        right: -50px;
-        top: -100px;
+        right: 0;
+        top: -70px;
         width: 420px;
         height: 405px;
         background: url('../images/laptop.png') 100% 100% no-repeat;
@@ -124,8 +124,12 @@ header {
 
     .cup {
         position: absolute;
-        top: -160px;
-        right: 300px;
+        right: 270px;
+        top: -150px;
+        width: 192px;
+        height: 286px;
+        background: url('../images/cup.png') 100% 100% no-repeat;
+        background-size: contain;
     }
 
     .order-button {
@@ -140,21 +144,41 @@ header {
     z-index: 0;
     background: url('../images/bg2.png') no-repeat;
     background-size: cover;
-    height: 4000px;
+    height: 3800px;
     width: 100%;
     padding-top: 550px;
+
+    .moon {
+        position: absolute;
+        z-index: 1;
+        width: 238px;
+        height: 238px;
+        left: 0;
+        bottom: 30%;
+        background: url('../images/moon.png') 100% 100% no-repeat;
+        background-size: contain;
+    }
+
+    .mars {
+        position: absolute;
+        z-index: 1;
+        width: 156px;
+        height: 160px;
+        right: 90px;
+        bottom: 40%;
+        background: url('../images/mars.png') 100% 100% no-repeat;
+        background-size: contain;
+    }
 
     .why-we {
         position: relative;
         padding-top: 50px;
 
         &--planet {
-            // width: 129px;
-            // height: 129px;
-            width: 100%;
-            position: relative;
-            top: -15px;
-            right: -30px;
+            width: 100px;
+            position: absolute;
+            top: 0;
+            right: 0;
         }
 
         &--heading {
@@ -226,6 +250,11 @@ header {
         margin-top: 200px;
         padding-top: 50px;
 
+        &-parts {
+            position: relative;
+            z-index: 2;
+        }
+
         &-heading {
             height: 250px;
         }
@@ -258,33 +287,25 @@ header {
             width: 338px;
             padding: 15px 15px 0 15px;
             background-color: white;
+            -webkit-filter: grayscale(100%);
+            -moz-filter: grayscale(100%);
+            -ms-filter: grayscale(100%);
+            -o-filter: grayscale(100%);
+            filter: url(../images/grayscale.svg);
+            filter: grayscale(100%);
+            /* Firefox 4+ */
+            filter: gray;
+            /* IE 6-9 */
+
+            @include transition();
         }
 
         &-image {
             display: block;
             margin: auto;
             width: 100%;
+
         }
-    }
-
-    .moon {
-        position: absolute;
-        width: 266px;
-        height: 255px;
-        left: -22%;
-        bottom: -11%;
-        background: url('../images/moon.png') 100% 100% no-repeat;
-        background-size: contain;
-    }
-
-    .mars {
-        position: absolute;
-        width: 156px;
-        height: 160px;
-        right: -15%;
-        bottom: 40%;
-        background: url('../images/mars.png') 100% 100% no-repeat;
-        background-size: contain;
     }
 
     .more-examples {
@@ -410,13 +431,13 @@ header {
     }
 }
 
-.section-white {
+.bg-white {
     position: relative;
-    top: 480%;
+    top: 320%;
     z-index: 1;
     background: url(../images/white-bg.png) 85% no-repeat;
     background-size: cover;
-    height: 1352px;
+    height: 290px;
     width: 100%;
     padding-top: 290px;
 
