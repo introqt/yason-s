@@ -8389,8 +8389,8 @@ header .order-button:hover {
 }
 
 .bg-red {
-  position: absolute;
-  top: 200px;
+  position: relative;
+  top: -500px;
   z-index: 0;
   background: url("../images/bg2.png") no-repeat;
   background-size: cover;
@@ -8664,11 +8664,11 @@ header .order-button:hover {
 
 .bg-white {
   position: relative;
-  top: 340%;
+  top: -600px;
   z-index: 1;
   background: url(../images/white-bg.png) 85% no-repeat;
   background-size: cover;
-  height: 290px;
+  height: 900px;
   width: 100%;
   padding-top: 290px;
 }
@@ -8751,7 +8751,7 @@ header .order-button:hover {
 
 .footer {
   position: relative;
-  bottom: -4250px;
+  bottom: 0;
   background: url("../images/footer-bg.png") no-repeat;
   background-size: cover;
   z-index: 10;
