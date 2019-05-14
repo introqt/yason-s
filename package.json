@@ -1,0 +1,24 @@
+{
+  "name": "yason-s",
+  "version": "1.0.0",
+  "description": "New Yason's Workshop Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/introqt/yason-s.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/introqt/yason-s/issues"
+  },
+  "homepage": "https://github.com/introqt/yason-s#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.2"
+  }
+}

@@ -26,10 +26,10 @@
                             <a class="nav-link" href="#">Главная</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">О нас</a>
+                            <a class="nav-link" href="#why-we">О нас</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Портфолио</a>
+                            <a class="nav-link" href="#portfolio">Портфолио</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Контакты</a>
@@ -62,7 +62,7 @@
 
     <section class="bg-red">
         <div class="container">
-            <div class="row why-we justify-content-center">
+            <div class="row why-we justify-content-center" id="why-we">
                 <div class="col-lg-2 col-sm-3">
                     <img src="./src/images/planet.png" alt="Why we" class="why-we--planet">
                 </div>
@@ -93,7 +93,7 @@
                 <div class="col-4 offset-8 raketa">&nbsp;</div>
             </div>
 
-            <div class="row portfolio">
+            <div class="row portfolio" id="portfolio">
                 <div class="portfolio-heading col-5">
                     <h3 class="portfolio--heading">Наши работы</h3>
                     <div class="portfolio--cosmonaute">&nbsp;</div>
@@ -105,7 +105,7 @@
                     <img src="./src/images/portfolio/вар 1.png" alt="Portfolio example" class="portfolio-image">
                 </div>
                 <div class="portfolio-part col-4">
-                    <img src="./src/images/portfolio/вар 1.png" alt="Portfolio example" class="portfolio-image">
+                    <img src="./src/images/portfolio/neorust.jpg" alt="Portfolio example" class="portfolio-image">
                 </div>
                 <div class="portfolio-part col-4">
                     <img src="./src/images/portfolio/вар 1.png" alt="Portfolio example" class="portfolio-image">
@@ -235,7 +235,7 @@
                             <a href="https://www.youtube.com/channel/UCZ0XQth9pMmHF5GTOktvnEA" target="_blank"></a>
                         </li>
                         <li class="social-media-icons__item social-media-icons__item--instagram">
-                            <a href="www.instagram.com/stop_looks" target="_blank"></a>
+                            <a href="https://www.instagram.com/stop_looks" target="_blank"></a>
                         </li>
                         <li class="social-media-icons__item social-media-icons__item--facebook">
                             <a href="https://www.facebook.com/profile.php?id=100013709261309" target="_blank"></a>
@@ -243,13 +243,12 @@
                         <li class="social-media-icons__item social-media-icons__item--behance">
                             <a href="https://www.behance.net/yaroslove" target="_blank"></a>
                         </li>
-                        </ul>
                 </div>
             </div>
         </div>
     </footer>
 
-    <button onclick="topFunction()" id="myBtn">↑</button>
+    <button onclick="up()" id="myBtn">↑</button>
     <script src="./src/js/custom.js"></script>
     <script src="./src/js/jquery.js"></script>
     <script src="./src/js/bootstrap.min.js"></script>

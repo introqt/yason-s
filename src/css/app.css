@@ -8236,12 +8236,12 @@ h3 {
 }
 body {
   position: relative;
+  font-family: "Myriad Pro";
 }
 
 header {
   position: relative;
   z-index: 1;
-  font-family: "Myriad Pro";
   background: url("../images/background.png") no-repeat;
   background-size: cover;
   height: 720px;
@@ -8250,7 +8250,6 @@ header .nav-section {
   height: 75px;
 }
 header .logo-text {
-  font-family: "Myriad Pro";
   color: white;
   line-height: 0.948;
   transform: matrix(0.066198871, 0, 0, 0.0664210511, 0, 0);
@@ -8288,6 +8287,7 @@ header .logo:hover .logo-text {
 header nav .nav {
   font-size: 17.333px;
   line-height: 1.2;
+  text-transform: uppercase;
 }
 header nav .nav-link {
   color: #ffffff;
@@ -8317,11 +8317,13 @@ header .letter {
 }
 header .letter a {
   display: block;
-  background: url("../images/message.png") no-repeat;
+  background: url("../images/messages-sprite.png") 100% 100% no-repeat;
   background-size: auto;
+  background-position: 0 6px;
+  cursor: pointer;
 }
 header .letter a:hover {
-  cursor: pointer;
+  background-position: 0 -29px;
 }
 header .space-above {
   margin-top: 185px;
@@ -8337,7 +8339,6 @@ header .heading {
 }
 header .subheading {
   font-size: 19px;
-  font-family: "MyriadPro";
   color: white;
   line-height: 1.235;
   width: 720px;
@@ -8389,12 +8390,13 @@ header .order-button:hover {
   z-index: 0;
   background: url("../images/bg2.png") no-repeat;
   background-size: cover;
-  height: 3500px;
+  height: 4000px;
   width: 100%;
   padding-top: 550px;
 }
 .bg-red .why-we {
   position: relative;
+  padding-top: 50px;
 }
 .bg-red .why-we--planet {
   width: 100%;
@@ -8422,7 +8424,6 @@ header .order-button:hover {
 }
 .bg-red .pluses--block .heading {
   font-size: 18.667px;
-  font-family: "Myriad Pro";
   color: white;
   font-weight: bold;
   text-transform: uppercase;
@@ -8430,8 +8431,8 @@ header .order-button:hover {
   text-align: center;
 }
 .bg-red .pluses--block .text {
-  font-size: 12px;
-  padding-top: 30px;
+  font-size: 16px;
+  padding-top: 15px;
 }
 .bg-red .pluses--block-1 {
   height: 440px;
@@ -8458,6 +8459,7 @@ header .order-button:hover {
 }
 .bg-red .portfolio {
   margin-top: 200px;
+  padding-top: 50px;
 }
 .bg-red .portfolio-heading {
   height: 250px;
@@ -8518,7 +8520,6 @@ header .order-button:hover {
 .bg-red .more-examples-button {
   display: block;
   margin: auto;
-  font-family: "Myriad Pro";
   background-image: -moz-linear-gradient(0deg, #b7256e 0%, #f8636b 100%);
   background-image: -webkit-linear-gradient(0deg, #b7256e 0%, #f8636b 100%);
   background-image: -ms-linear-gradient(0deg, #b7256e 0%, #f8636b 100%);
@@ -8577,7 +8578,6 @@ header .order-button:hover {
 }
 .bg-red .socials .youtube-white-border p {
   font-size: 35.649px;
-  font-family: "Myriad Pro";
   color: white;
   font-weight: bold;
   line-height: 1.122;
@@ -8617,14 +8617,12 @@ header .order-button:hover {
   position: relative;
   z-index: 20;
   font-size: 72px;
-  font-family: "Myriad Pro";
   color: #7ba4ea;
   font-weight: bold;
   line-height: 0.556;
   margin: 0;
 }
 .bg-red .socials .vk-how p {
-  font-family: "Myriad Pro";
   position: relative;
   font-size: 29.793px;
   color: white;
@@ -8651,8 +8649,8 @@ header .order-button:hover {
 }
 
 .section-white {
-  position: absolute;
-  top: 3606px;
+  position: relative;
+  top: 480%;
   z-index: 1;
   background: url(../images/white-bg.png) 85% no-repeat;
   background-size: cover;
@@ -8690,8 +8688,7 @@ header .order-button:hover {
   font-weight: bold;
 }
 .section-white form {
-  padding-top: 193px;
-  font-family: "Myriad Pro";
+  padding-top: 100px;
   color: rgba(0, 0, 0, 0.749);
 }
 .section-white form input,
@@ -8739,7 +8736,6 @@ header .order-button:hover {
 }
 
 .footer {
-  font-family: "Myriad Pro";
   position: relative;
   bottom: -4250px;
   background: url("../images/footer-bg.png") no-repeat;

@@ -4,12 +4,12 @@
 
 body {
     position: relative;
+    font-family: "Myriad Pro";
 }
 
 header {
     position: relative;
     z-index: 1;
-    font-family: "Myriad Pro";
     background: url('../images/background.png') no-repeat;
     background-size: cover;
     height: 720px;
@@ -19,7 +19,6 @@ header {
     }
 
     .logo-text {
-        font-family: "Myriad Pro";
         color: rgb(255, 255, 255);
         line-height: 0.948;
         transform: matrix(0.06619887099904, 0, 0, 0.06642105113718, 0, 0);
@@ -57,6 +56,7 @@ header {
         .nav {
             font-size: 17.333px;
             line-height: 1.2;
+            text-transform: uppercase;
 
             &-link {
                 color: #ffffff;
@@ -78,14 +78,14 @@ header {
         text-align: right;
 
         a {
-            // width: 20%;
             display: block;
-            background: url('../images/message.png') no-repeat;
+            background: url('../images/messages-sprite.png') 100% 100% no-repeat;
             background-size: auto;
-            // background-position: center right;
+            background-position: 0 6px;
+            cursor: pointer;
 
             &:hover {
-                cursor: pointer;
+                background-position: 0 -29px;
             }
         }
     }
@@ -106,7 +106,6 @@ header {
 
     .subheading {
         font-size: 19px;
-        font-family: "MyriadPro";
         color: rgb(255, 255, 255);
         line-height: 1.235;
         width: 720px;
@@ -141,12 +140,13 @@ header {
     z-index: 0;
     background: url('../images/bg2.png') no-repeat;
     background-size: cover;
-    height: 3500px;
+    height: 4000px;
     width: 100%;
     padding-top: 550px;
 
     .why-we {
         position: relative;
+        padding-top: 50px;
 
         &--planet {
             // width: 129px;
@@ -180,7 +180,6 @@ header {
 
             .heading {
                 font-size: 18.667px;
-                font-family: "Myriad Pro";
                 color: rgb(255, 255, 255);
                 font-weight: bold;
                 text-transform: uppercase;
@@ -189,8 +188,8 @@ header {
             }
 
             .text {
-                font-size: 12px;
-                padding-top: 30px;
+                font-size: 16px;
+                padding-top: 15px;
             }
 
             &-1 {
@@ -225,6 +224,7 @@ header {
 
     .portfolio {
         margin-top: 200px;
+        padding-top: 50px;
 
         &-heading {
             height: 250px;
@@ -293,7 +293,6 @@ header {
         &-button {
             display: block;
             margin: auto;
-            font-family: "Myriad Pro";
 
             @include gradient-button();
         }
@@ -332,7 +331,6 @@ header {
 
             p {
                 font-size: 35.649px;
-                font-family: "Myriad Pro";
                 color: rgb(255, 255, 255);
                 font-weight: bold;
                 line-height: 1.122;
@@ -377,7 +375,6 @@ header {
                 position: relative;
                 z-index: 20;
                 font-size: 72px;
-                font-family: "Myriad Pro";
                 color: rgb(123, 164, 234);
                 font-weight: bold;
                 line-height: 0.556;
@@ -385,7 +382,6 @@ header {
             }
 
             p {
-                font-family: "Myriad Pro";
                 position: relative;
                 font-size: 29.793px;
                 color: rgb(255, 255, 255);
@@ -415,8 +411,8 @@ header {
 }
 
 .section-white {
-    position: absolute;
-    top: 3606px;
+    position: relative;
+    top: 480%;
     z-index: 1;
     background: url(../images/white-bg.png) 85% no-repeat;
     background-size: cover;
@@ -458,8 +454,7 @@ header {
     }
 
     form {
-        padding-top: 193px;
-        font-family: "Myriad Pro";
+        padding-top: 100px;
         color: rgba(0, 0, 0, 0.749);
 
         input,
@@ -509,7 +504,6 @@ header {
 }
 
 .footer {
-    font-family: "Myriad Pro";
     position: relative;
     bottom: -4250px;
     background: url('../images/footer-bg.png') no-repeat;
