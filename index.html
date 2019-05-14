@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./src/css/fonts.css">
     <link rel="stylesheet" href="./src/css/app.css">
     <link rel="shortcut icon" href="./src/images/favicon.ico" type="image/png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <title>Yason's</title>
 </head>
@@ -49,7 +50,7 @@
                     <h2 class="subheading">Это опытная студия, которая состоит из профессиональных графических и видео
                         дизайнеров. Мы поможем вам реализовать ваши идеи и прекрасные решения.</h2>
                 </div>
-                <div class="heading-animated-images col-lg-4">
+                <div class="heading-animated-images col-lg-4" data-aos="fade-left">
                     <div class="cup">&nbsp;</div>
                     <div class="laptop">&nbsp;</div>
                 </div>
@@ -71,7 +72,7 @@
                 </div>
             </div>
 
-            <div class="row pluses">
+            <div class="row pluses" data-aos="fade-up">
                 <div class="col-4 pluses--block pluses--block-1">
                     <h3 class="heading">Планирование работы</h3>
                     <p class="text">Мы оптимально распределяем ресурсы для достижения ваших целей в кратчайшие сроки</p>
@@ -89,7 +90,7 @@
                 </div>
             </div>
 
-            <div class="row" style="position: relative;">
+            <div class="row" style="position: relative;" data-aos="fade-up-left">
                 <div class="col-4 offset-8 raketa">&nbsp;</div>
             </div>
 
@@ -102,22 +103,28 @@
 
             <div class="row portfolio-parts justify-content-between">
                 <div class="portfolio-part col-4">
-                    <img src="./src/images/portfolio/вар 1.png" alt="Portfolio example" class="portfolio-image grayscale">
+                    <img src="./src/images/portfolio/вар 1.png" alt="Portfolio example"
+                        class="portfolio-image grayscale">
                 </div>
                 <div class="portfolio-part col-4">
-                    <img src="./src/images/portfolio/neorust.jpg" alt="Portfolio example" class="portfolio-image grayscale">
+                    <img src="./src/images/portfolio/neorust.jpg" alt="Portfolio example"
+                        class="portfolio-image grayscale">
                 </div>
                 <div class="portfolio-part col-4">
-                    <img src="./src/images/portfolio/вар 1.png" alt="Portfolio example" class="portfolio-image grayscale">
+                    <img src="./src/images/portfolio/вар 1.png" alt="Portfolio example"
+                        class="portfolio-image grayscale">
                 </div>
                 <div class="portfolio-part col-4">
-                    <img src="./src/images/portfolio/вар 1.png" alt="Portfolio example" class="portfolio-image grayscale">
+                    <img src="./src/images/portfolio/вар 1.png" alt="Portfolio example"
+                        class="portfolio-image grayscale">
                 </div>
                 <div class="portfolio-part col-4">
-                    <img src="./src/images/portfolio/вар 1.png" alt="Portfolio example" class="portfolio-image grayscale">
+                    <img src="./src/images/portfolio/вар 1.png" alt="Portfolio example"
+                        class="portfolio-image grayscale">
                 </div>
                 <div class="portfolio-part col-4">
-                    <img src="./src/images/portfolio/вар 1.png" alt="Portfolio example" class="portfolio-image grayscale">
+                    <img src="./src/images/portfolio/вар 1.png" alt="Portfolio example"
+                        class="portfolio-image grayscale">
                 </div>
             </div>
 
@@ -155,7 +162,7 @@
                 <div class="col-6">
                     <h1 class="contact-us--heading">Заинтересовали наши услуги?</h1>
                 </div>
-                <div class="col-6 quoute">
+                <div class="col-6 quoute" data-aos="fade-left">
                     <span class="curly-brace">{</span>
                     <p class="quoute--frase">Мы предлагаем полный спектр<br>услуг по гибкому ценообразованию<br>и
                         превосходному обслуживанию</p>
@@ -253,6 +260,12 @@
     <script src="./src/js/jquery.js"></script>
     <script src="./src/js/custom.js"></script>
     <script src="./src/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+        });
+    </script>
 </body>
 
 </html>

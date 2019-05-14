@@ -42,11 +42,3 @@ const grayscalesList = document.getElementsByClassName('grayscale');
     el.classList.add('grayscale');
   });
 });
-
-
-// grayscales.forEach(element => {
-
-// });
-// grayscales.addEventListener('hover', function cancelGrayscale(event) {
-
-// });
