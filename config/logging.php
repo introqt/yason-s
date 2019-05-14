@@ -38,7 +38,7 @@ return [
             'driver' => 'stack',
             'channels' => ['single'],
         ],
-        
+
         'single' => [
             'driver' => 'errorlog',
             'level' => 'debug',
