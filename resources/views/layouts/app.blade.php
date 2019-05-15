@@ -153,6 +153,7 @@
     </div>
 
     <div class="moon">&nbsp;</div>
+    <div class="mars">&nbsp;</div>
 </section>
 
 <section class="bg-white" id="contact-us">
