@@ -45,7 +45,7 @@
     </div>
     <section class="container">
         <div class="row space-above">
-            <div class="heading-block col-md-6 col-lg-8">
+            <div class="heading-block col-md-6 col-lg-8" data-aos="fade-right">
                 <h1 class="heading">Yason's workshop</h1>
                 <h2 class="subheading">Это опытная студия, которая состоит из профессиональных графических и видео
                     дизайнеров. Мы поможем вам реализовать ваши идеи и прекрасные решения.</h2>
@@ -56,7 +56,7 @@
             </div>
         </div>
         <div class="row">
-            <button class="order-button">Оформить заказ</button>
+            <button class="order-button" data-aos="fade-right">Оформить заказ</button>
         </div>
     </section>
 </header>
@@ -65,10 +65,10 @@
     <div class="container">
         <div class="row why-we justify-content-center" id="why-we">
             <div class="col-lg-2 col-sm-3">
-                <img src="{{ asset('images/planet.png') }}" alt="Why we" class="why-we--planet">
+                <img src="{{ asset('images/planet.png') }}" alt="Why we" class="why-we--planet" data-aos="fade-right">
             </div>
             <div class="col-lg-4 col-sm-7">
-                <h1 class="why-we--heading">Почему<br>именно мы?</h1>
+                <h1 class="why-we--heading" data-aos="fade-left">Почему<br>именно мы?</h1>
             </div>
         </div>
 
@@ -95,13 +95,13 @@
         </div>
 
         <div class="row portfolio" id="portfolio">
-            <div class="portfolio-heading col-5">
+            <div class="portfolio-heading col-5" data-aos="zoom-in">
                 <h3 class="portfolio--heading">Наши работы</h3>
                 <div class="portfolio--cosmonaute">&nbsp;</div>
             </div>
         </div>
 
-        <div class="row portfolio-parts justify-content-between">
+        <div class="row portfolio-parts justify-content-between" data-aos="zoom-out-up">
             <div class="portfolio-part col-4">
                 <img src="{{ asset('images/portfolio/example1.png') }}" alt="Portfolio example"
                      class="portfolio-image grayscale">
@@ -133,7 +133,7 @@
         </div>
     </div>
 
-    <div class="container socials">
+    <div class="container socials" data-aos="flip-left">
         <a target="_blank" href="https://www.youtube.com/channel/UCZ0XQth9pMmHF5GTOktvnEA"
            class="youtube-white-border">
             <p><strong>Ищите нас в космосе<br>и на Youtube</strong></p>
@@ -153,13 +153,12 @@
     </div>
 
     <div class="moon">&nbsp;</div>
-    <div class="mars">&nbsp;</div>
 </section>
 
 <section class="bg-white" id="contact-us">
     <div class="container">
         <div class="row">
-            <div class="col-6">
+            <div class="col-6" data-aos="fade-right">
                 <h1 class="contact-us--heading">Заинтересовали наши услуги?</h1>
             </div>
             <div class="col-6 quoute" data-aos="fade-left">
