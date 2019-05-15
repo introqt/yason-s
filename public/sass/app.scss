@@ -253,6 +253,22 @@ header {
     &-parts {
       position: relative;
       z-index: 2;
+      line-height: 0;
+
+      -webkit-column-count: 4;
+      -webkit-column-gap: 15px;
+      -moz-column-count: 4;
+      -moz-column-gap: 15px;
+      column-count: 4;
+      column-gap: 15px;
+
+      img, video {
+        width: 100% !important;
+        height: auto !important;
+        margin-bottom: 15px;
+        border: 5px solid white;
+        border-radius: 15px;
+      }
     }
 
     &-heading {
@@ -287,6 +303,10 @@ header {
       // width: 338px;
       padding: 15px 15px 0 15px;
       background-color: white;
+
+      video {
+        width: 100%;
+      }
     }
 
     &-image {

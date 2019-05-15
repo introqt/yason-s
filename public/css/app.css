@@ -8488,6 +8488,20 @@ header .order-button:hover {
 .bg-red .portfolio-parts {
   position: relative;
   z-index: 2;
+  line-height: 0;
+  -webkit-column-count: 4;
+  -webkit-column-gap: 15px;
+  -moz-column-count: 4;
+  -moz-column-gap: 15px;
+  column-count: 4;
+  column-gap: 15px;
+}
+.bg-red .portfolio-parts img, .bg-red .portfolio-parts video {
+  width: 100% !important;
+  height: auto !important;
+  margin-bottom: 15px;
+  border: 5px solid white;
+  border-radius: 15px;
 }
 .bg-red .portfolio-heading {
   height: 250px;
@@ -8517,6 +8531,9 @@ header .order-button:hover {
   height: 481px;
   padding: 15px 15px 0 15px;
   background-color: white;
+}
+.bg-red .portfolio-part video {
+  width: 100%;
 }
 .bg-red .portfolio-image {
   display: block;

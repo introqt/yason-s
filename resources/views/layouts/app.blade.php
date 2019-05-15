@@ -101,35 +101,38 @@
             </div>
         </div>
 
-        <div class="row portfolio-parts justify-content-between" data-aos="zoom-out-up">
-            <div class="portfolio-part col-4">
-                <img src="{{ asset('images/portfolio/example1.png') }}" alt="Portfolio example"
-                     class="portfolio-image grayscale">
-            </div>
-            <div class="portfolio-part col-4">
-                <img src="{{ asset('images/portfolio/neorust.jpg') }}" alt="Portfolio example"
-                     class="portfolio-image grayscale">
-            </div>
-            <div class="portfolio-part col-4">
-                <img src="{{ asset('images/portfolio/example1.png') }}" alt="Portfolio example"
-                     class="portfolio-image grayscale">
-            </div>
-            <div class="portfolio-part col-4">
-                <img src="{{ asset('images/portfolio/example1.png') }}" alt="Portfolio example"
-                     class="portfolio-image grayscale">
-            </div>
-            <div class="portfolio-part col-4">
-                <img src="{{ asset('images/portfolio/example1.png') }}" alt="Portfolio example"
-                     class="portfolio-image grayscale">
-            </div>
-            <div class="portfolio-part col-4">
-                <img src="{{ asset('images/portfolio/example1.png') }}" alt="Portfolio example"
-                     class="portfolio-image grayscale">
-            </div>
+        <div class="portfolio-parts" data-aos="zoom-out-up">
+            <img src="{{ asset('images/portfolio/example1.png') }}" alt="Portfolio example"
+                 class="portfolio-image grayscale">
+            <img src="{{ asset('images/portfolio/neorust.jpg') }}" alt="Portfolio example"
+                 class="portfolio-image grayscale">
+            <img src="{{ asset('images/portfolio/acsteam.jpg') }}" alt="Portfolio example"
+                 class="portfolio-image grayscale">
+            <img src="{{ asset('images/portfolio/knute.jpg') }}" alt="Portfolio example"
+                 class="portfolio-image grayscale">
+            <video controls="controls" poster="{{ asset('images/portfolio/acsteam.jpg') }}">
+                <source src="{{ asset('images/portfolio/acsteam.mov') }}">
+                Тег video не поддерживается вашим браузером.
+                <a href="{{ asset('images/portfolio/acsteam.mov') }}">Скачайте видео</a>.
+            </video>
+            <img src="{{ asset('images/portfolio/instarding_kinul.jpg') }}" alt="Portfolio example"
+                 class="portfolio-image grayscale">
+            <img src="{{ asset('images/portfolio/PRESS2.png') }}" alt="Portfolio example"
+                 class="portfolio-image grayscale">
+            <img src="{{ asset('images/portfolio/prizes.png') }}" alt="Portfolio example"
+                 class="portfolio-image grayscale">
+            <img src="{{ asset('images/portfolio/schoolboy.jpg') }}" alt="Portfolio example"
+                 class="portfolio-image grayscale">
+            <img src="{{ asset('images/portfolio/socials3.png') }}" alt="Portfolio example"
+                 class="portfolio-image grayscale">
+            <img src="{{ asset('images/portfolio/trader_path.jpg') }}" alt="Portfolio example"
+                 class="portfolio-image grayscale">
+            <img src="{{ asset('images/portfolio/white-violet.png') }}" alt="Portfolio example"
+                 class="portfolio-image grayscale">
         </div>
 
         <div class="row more-examples">
-            <button class="more-examples-button">Оформить заказ</button>
+            <button class="more-examples-button">Смотреть все работы</button>
         </div>
     </div>
 
@@ -222,7 +225,7 @@
                     What's App</a>
             </div>
 
-            <div class="col-4 footer-logo">
+            <div class="col-4 footer-logo" data-aos="flip-up">
                 <a class="navbar-brand footer-logo-link" href="#">
                     <img src="{{ asset('images/footer-logo.png') }}" alt="Footer logo"
                          class="footer-logo-image"><i>yason's</i></a>
