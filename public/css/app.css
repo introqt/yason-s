@@ -8518,6 +8518,9 @@ header .order-button:hover {
   padding: 15px 15px 0 15px;
   background-color: white;
 }
+.bg-red .portfolio-part video {
+  width: 100%;
+}
 .bg-red .portfolio-image {
   display: block;
   margin: auto;

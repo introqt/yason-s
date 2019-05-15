@@ -111,16 +111,19 @@
                      class="portfolio-image grayscale">
             </div>
             <div class="portfolio-part col-4">
-                <img src="{{ asset('images/portfolio/example1.png') }}" alt="Portfolio example"
+                <img src="{{ asset('images/portfolio/acsteam.jpg') }}" alt="Portfolio example"
                      class="portfolio-image grayscale">
             </div>
             <div class="portfolio-part col-4">
-                <img src="{{ asset('images/portfolio/example1.png') }}" alt="Portfolio example"
+                <img src="{{ asset('images/portfolio/knute.jpg') }}" alt="Portfolio example"
                      class="portfolio-image grayscale">
             </div>
             <div class="portfolio-part col-4">
-                <img src="{{ asset('images/portfolio/example1.png') }}" alt="Portfolio example"
-                     class="portfolio-image grayscale">
+                <video controls="controls" poster="{{ asset('images/portfolio/acsteam.jpg') }}">
+                    <source src="{{ asset('images/portfolio/acsteam.mov') }}">
+                    Тег video не поддерживается вашим браузером.
+                    <a href="{{ asset('images/portfolio/acsteam.mov') }}">Скачайте видео</a>.
+                </video>
             </div>
             <div class="portfolio-part col-4">
                 <img src="{{ asset('images/portfolio/example1.png') }}" alt="Portfolio example"
@@ -222,7 +225,7 @@
                     What's App</a>
             </div>
 
-            <div class="col-4 footer-logo">
+            <div class="col-4 footer-logo" data-aos="flip-up">
                 <a class="navbar-brand footer-logo-link" href="#">
                     <img src="{{ asset('images/footer-logo.png') }}" alt="Footer logo"
                          class="footer-logo-image"><i>yason's</i></a>
