@@ -110,11 +110,14 @@
                  class="portfolio-image grayscale">
             <img src="{{ asset('images/portfolio/knute.jpg') }}" alt="Portfolio example"
                  class="portfolio-image grayscale">
-            <video controls="controls" poster="{{ asset('images/portfolio/acsteam.jpg') }}">
-                <source src="{{ asset('images/portfolio/acsteam.mov') }}">
-                Тег video не поддерживается вашим браузером.
-                <a href="{{ asset('images/portfolio/acsteam.mov') }}">Скачайте видео</a>.
-            </video>
+            {{--<video controls="controls" poster="{{ asset('images/portfolio/acsteam.jpg') }}">--}}
+            {{--<source src="{{ asset('images/portfolio/acsteam.mov') }}">--}}
+            {{--Тег video не поддерживается вашим браузером.--}}
+            {{--<a href="{{ asset('images/portfolio/acsteam.mov') }}">Скачайте видео</a>.--}}
+            {{--</video>--}}
+            <iframe src="https://www.youtube.com/embed/Y0vvT2jkkYc" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
             <img src="{{ asset('images/portfolio/instarding_kinul.jpg') }}" alt="Portfolio example"
                  class="portfolio-image grayscale">
             <img src="{{ asset('images/portfolio/PRESS2.png') }}" alt="Portfolio example"

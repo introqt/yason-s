@@ -8498,7 +8498,7 @@ header .order-button:hover {
   column-count: 4;
   column-gap: 15px;
 }
-.bg-red .portfolio-parts img, .bg-red .portfolio-parts video {
+.bg-red .portfolio-parts img, .bg-red .portfolio-parts video, .bg-red .portfolio-parts iframe {
   width: 100% !important;
   height: auto !important;
   margin-bottom: 15px;
