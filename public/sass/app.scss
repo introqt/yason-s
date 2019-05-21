@@ -10,9 +10,10 @@ body {
 header {
   position: relative;
   z-index: 1;
-  background: url('../images/background.png') no-repeat;
+  background: url('../images/bg-1.png') no-repeat;
   background-size: cover;
-  height: 800px;
+  overflow: hidden;
+  height: 700px;
 
   .nav-section {
     height: 75px;
@@ -142,9 +143,10 @@ header {
   position: relative;
   top: -500px;
   z-index: 0;
-  background: url('../images/bg2.png') no-repeat;
+  background: url('../images/bg-2.png') no-repeat;
   background-size: cover;
-  height: 3800px;
+  overflow: hidden;
+  height: 3400px;
   width: 100%;
   padding-top: 550px;
 
@@ -441,14 +443,13 @@ header {
 
 .bg-white {
   position: relative;
-  top: -600px;
+  top: -400px;
   z-index: 1;
-  background: url(../images/white-bg.png) 85% no-repeat;
+  background: url(../images/bg-3.png) 100% no-repeat;
   background-size: cover;
   //overflow: hidden;
-  height: 900px;
+  height: 500px;
   width: 100%;
-  padding-top: 290px;
 
   .contact-us--heading {
     font-size: 48px;
@@ -536,7 +537,7 @@ header {
 .footer {
   position: relative;
   bottom: 0;
-  background: url('../images/footer-bg.png') no-repeat;
+  background: url('../images/bg-4.png') no-repeat;
   background-size: cover;
   z-index: 10;
   height: 455px;
