@@ -8723,7 +8723,8 @@ header .order-button:hover {
   color: rgba(0, 0, 0, 0.749);
 }
 .bg-white form input,
-.bg-white form .form-textarea {
+.bg-white form .form-textarea,
+.bg-white form select {
   padding: 5px 0;
   width: 100%;
   border: 0;
@@ -8735,9 +8736,14 @@ header .order-button:hover {
   -moz-transition: all 0.1s ease-in-out;
 }
 .bg-white form input:focus,
-.bg-white form .form-textarea:focus {
+.bg-white form .form-textarea:focus,
+.bg-white form select:focus {
   outline: 0;
   border-bottom: 2px solid #63a6f9;
+}
+.bg-white form select {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.749);
 }
 .bg-white form .form-submit {
   display: block;
@@ -8811,7 +8817,7 @@ header .order-button:hover {
   width: 100%;
   display: block;
 }
-.footer-logo-link i {
+.footer-logo i {
   font-family: "Oblivion";
   text-transform: lowercase;
   font-size: 60px;
@@ -8920,6 +8926,10 @@ header .order-button:hover {
   /* Firefox 4+ */
   filter: gray;
   /* IE 6-9 */
+}
+
+.modal-body img {
+  width: 100%;
 }
 
 /*# sourceMappingURL=app.css.map */

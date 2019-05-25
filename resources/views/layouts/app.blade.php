@@ -14,7 +14,7 @@
 </head>
 
 <body>
-<header class="text-white">
+<header class="text-white" id="header">
     <div class="container">
         <div class="row align-items-center justify-content-around  nav-section">
             <div class="logo col-2">
@@ -102,36 +102,14 @@
         </div>
 
         <div class="portfolio-parts" data-aos="zoom-out-up">
-            <img src="{{ asset('images/portfolio/example1.png') }}" alt="Portfolio example"
-                 class="portfolio-image grayscale">
-            <img src="{{ asset('images/portfolio/neorust.jpg') }}" alt="Portfolio example"
-                 class="portfolio-image grayscale">
-            <img src="{{ asset('images/portfolio/acsteam.jpg') }}" alt="Portfolio example"
-                 class="portfolio-image grayscale">
-            <img src="{{ asset('images/portfolio/knute.jpg') }}" alt="Portfolio example"
-                 class="portfolio-image grayscale">
-            {{--<video controls="controls" poster="{{ asset('images/portfolio/acsteam.jpg') }}">--}}
-            {{--<source src="{{ asset('images/portfolio/acsteam.mov') }}">--}}
-            {{--Тег video не поддерживается вашим браузером.--}}
-            {{--<a href="{{ asset('images/portfolio/acsteam.mov') }}">Скачайте видео</a>.--}}
-            {{--</video>--}}
+            @foreach($examples as $example)
+                <img src="{{ Voyager::image($example->thumbnail('small', 'src')) }}"
+                     alt="{{ $example->title }}" class="portfolio-image grayscale"
+                     data-id="{{ $example->id }}" data-toggle="modal" data-target="#exampleModal"/>
+            @endforeach
             <iframe src="https://www.youtube.com/embed/Y0vvT2jkkYc" frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
-            <img src="{{ asset('images/portfolio/instarding_kinul.jpg') }}" alt="Portfolio example"
-                 class="portfolio-image grayscale">
-            <img src="{{ asset('images/portfolio/PRESS2.png') }}" alt="Portfolio example"
-                 class="portfolio-image grayscale">
-            <img src="{{ asset('images/portfolio/prizes.png') }}" alt="Portfolio example"
-                 class="portfolio-image grayscale">
-            <img src="{{ asset('images/portfolio/schoolboy.jpg') }}" alt="Portfolio example"
-                 class="portfolio-image grayscale">
-            <img src="{{ asset('images/portfolio/socials3.png') }}" alt="Portfolio example"
-                 class="portfolio-image grayscale">
-            <img src="{{ asset('images/portfolio/trader_path.jpg') }}" alt="Portfolio example"
-                 class="portfolio-image grayscale">
-            <img src="{{ asset('images/portfolio/white-violet.png') }}" alt="Portfolio example"
-                 class="portfolio-image grayscale">
         </div>
 
         <div class="row more-examples">
@@ -179,19 +157,27 @@
         <form action="#">
             <div class="row">
                 <div class="col-6">
-                    <input type="text" placeholder="Ваше имя" required="required">
+                    <input type="text" placeholder="Ваше имя">
                 </div>
                 <div class="col-6">
                     <input type="email" placeholder="Адрес электронной почты" required="required">
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row align-items-end" style="height: 81px;">
                 <div class="col-6">
-                    <input type="text" placeholder="Услуги" required="required">
+                    <select name="services" id="services">
+                        @foreach($services as $service)
+                            <option value="{{$service->title}}">{{$service->title}}</option>
+                        @endforeach
+                    </select>
                 </div>
                 <div class="col-6">
-                    <input type="text" placeholder="Бюджет" required="required">
+                    <select name="budget" id="budget">
+                        @foreach($prices as $price)
+                            <option value="{{$price->price}}">{{$price->price}}</option>
+                        @endforeach
+                    </select>
                 </div>
             </div>
 
@@ -203,8 +189,8 @@
 
             <div class="row">
                 <div class="col-12">
-                        <textarea name="message" cols="30" rows="10" placeholder="Сообщение" class="form-textarea"
-                                  required="required"></textarea>
+                    <textarea name="message" cols="30" rows="10" placeholder="Сообщение"
+                              class="form-textarea"></textarea>
                 </div>
             </div>
 
@@ -229,16 +215,15 @@
             </div>
 
             <div class="col-4 footer-logo" data-aos="flip-up">
-                <a class="navbar-brand footer-logo-link" href="#">
-                    <img src="{{ asset('images/footer-logo.png') }}" alt="Footer logo"
-                         class="footer-logo-image"><i>yason's</i></a>
+                <img src="{{ asset('images/footer-logo.png') }}" alt="Footer logo"
+                     class="footer-logo-image"><i>yason's</i>
             </div>
 
             <div class="col-4">
                 <nav class="nav footer-nav justify-content-between">
-                    <a class="nav-link" href="#">Главная</a>
-                    <a class="nav-link" href="#">О нас</a>
-                    <a class="nav-link" href="#">Портфолио</a>
+                    <a class="nav-link" href="#header">Главная</a>
+                    <a class="nav-link" href="#why-we">О нас</a>
+                    <a class="nav-link" href="#portfolio">Портфолио</a>
                 </nav>
 
                 <nav class="nav social-media-icons justify-content-around">
@@ -262,6 +247,25 @@
         </div>
     </div>
 </footer>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">ID-картка, розмір 105 на 74 мм</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="{{ asset('images/portfolio/PRESS2.png') }}" alt="Portfolio example"
+                     class="portfolio-image">
+            </div>
+        </div>
+    </div>
+</div>
 
 <button onclick="up();" id="myBtn">↑</button>
 <script src="{{ asset('js/jquery.js') }}"></script>

@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('layouts.app');
-});
+Route::get('/', 'HomePageController@index');
 
 
 Route::group(['prefix' => 'admin'], function () {
