@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}" type="image/png">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
-
+    {{--<meta name="csrf-token" content="{{ csrf_token() }}">--}}
     <title>Yason's</title>
 </head>
 
@@ -154,14 +154,15 @@
             </div>
         </div>
 
-        <form action="/send-order" method="post">
+        <form method="post" id="contact-us-form">
             @csrf
             <div class="row">
                 <div class="col-6">
-                    <input type="text" placeholder="Ваше имя">
+                    <input type="text" placeholder="Ваше имя" name="name" id="name">
                 </div>
                 <div class="col-6">
-                    <input type="email" placeholder="Адрес электронной почты" required="required">
+                    <input type="email" name="email" id="email" placeholder="Адрес электронной почты"
+                           required="required">
                 </div>
             </div>
 
@@ -184,18 +185,18 @@
 
             <div class="row">
                 <div class="col-6">
-                    <input type="text" placeholder="Тема" required="required">
+                    <input name="topic" id="topic" type="text" placeholder="Тема" required="required">
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-12">
-                    <textarea name="message" cols="30" rows="10" placeholder="Сообщение"
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Сообщение"
                               class="form-textarea"></textarea>
                 </div>
             </div>
 
-            <button class="form-submit" type="submit">
+            <button class="form-submit" id="send-order-button" type="button">
                 Отправить письмо
             </button>
         </form>
@@ -269,6 +270,7 @@
 </div>
 
 <button onclick="up();" id="myBtn">↑</button>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 <script src="{{ asset('js/jquery.js') }}"></script>
 <script src="{{ asset('js/custom.js') }}"></script>
 <script src="{{ asset('js/bootstrap.min.js') }}"></script>

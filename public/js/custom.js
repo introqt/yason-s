@@ -10,7 +10,8 @@ function scrollFunction() {
 window.onscroll = () => scrollFunction();
 
 function up() {
-  const top = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+  const top = Math.max(document.body.scrollTop,
+      document.documentElement.scrollTop);
   let t;
   if (top > 0) {
     window.scrollBy(0, ((top + 100) / -10));
@@ -40,5 +41,28 @@ const grayscalesList = document.getElementsByClassName('grayscale');
 
   el.addEventListener('mouseout', () => {
     el.classList.add('grayscale');
+  });
+});
+
+$('#send-order-button').click(() => {
+  // const fullPath = `http://${APPLICATION.url}/send-order`;
+  $.ajax({
+    url: '/send-order',
+    type: 'POST',
+    data: $('#contact-us-form').serialize(),
+    success: (result) => {
+      console.log(result);
+      $('#contact-us-form')[0].reset();
+
+      Swal.fire({
+        title: 'Успешно!',
+        text: 'Мы получили Ваш заказ!',
+        type: 'success',
+        confirmButtonText: 'Cool',
+      });
+    },
+    error: (err) => {
+      console.log(err);
+    },
   });
 });
