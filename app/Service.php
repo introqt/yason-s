@@ -2,10 +2,20 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use App\Core\Models\AbstractBaseModel;
 
-
-class Service extends Model
+class Service extends AbstractBaseModel
 {
-    
+    const ORDERING = 'order';
+    const SELECTING = 'title';
+
+    public function ordering(): string
+    {
+        return self::ORDERING;
+    }
+
+    public function selecting(): string
+    {
+        return self::SELECTING;
+    }
 }

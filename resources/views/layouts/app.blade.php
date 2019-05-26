@@ -170,14 +170,14 @@
             <div class="row align-items-end" style="height: 81px;">
                 <div class="col-6">
                     <select name="services" id="services">
-                        @foreach($services as $service)
+                        @foreach($services->get() as $service)
                             <option value="{{$service->title}}">{{$service->title}}</option>
                         @endforeach
                     </select>
                 </div>
                 <div class="col-6">
                     <select name="budget" id="budget">
-                        @foreach($prices as $price)
+                        @foreach($prices->get() as $price)
                             <option value="{{$price->price}}">{{$price->price}}</option>
                         @endforeach
                     </select>
