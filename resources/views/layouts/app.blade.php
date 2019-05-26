@@ -154,7 +154,8 @@
             </div>
         </div>
 
-        <form action="#">
+        <form action="/send-order" method="post">
+            @csrf
             <div class="row">
                 <div class="col-6">
                     <input type="text" placeholder="Ваше имя">

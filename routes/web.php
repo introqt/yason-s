@@ -12,7 +12,7 @@
 */
 
 Route::get('/', 'HomePageController@index');
-
+Route::post('/send-order', 'HomePageController@send-order');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
