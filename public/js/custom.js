@@ -45,24 +45,28 @@ const grayscalesList = document.getElementsByClassName('grayscale');
 });
 
 $('#send-order-button').click(() => {
-  // const fullPath = `http://${APPLICATION.url}/send-order`;
   $.ajax({
     url: '/send-order',
     type: 'POST',
     data: $('#contact-us-form').serialize(),
     success: (result) => {
-      console.log(result);
       $('#contact-us-form')[0].reset();
 
-      Swal.fire({
-        title: 'Успешно!',
-        text: 'Мы получили Ваш заказ!',
-        type: 'success',
-        confirmButtonText: 'Cool',
-      });
+      if (!result.errors) {
+        Swal.fire({
+          title: 'Успешно!',
+          text: 'Мы получили Ваш заказ!',
+          type: 'success',
+          confirmButtonText: 'Cool',
+        });
+      }
     },
-    error: (err) => {
-      console.log(err);
+    error: () => {
+      Swal.fire({
+        title: 'Заполните форму!',
+        text: 'Поля Email и Тема обязательны к заполнению!',
+        type: 'error',
+      });
     },
   });
 });

@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Example;
+use App\Http\Requests\SendOrderRequest;
 use App\Price;
 use App\Service;
-use Illuminate\Http\Request;
 use Telegram\Bot\Api;
 
 class HomePageController extends Controller
@@ -19,7 +19,7 @@ class HomePageController extends Controller
         return view('layouts.app', compact('examples', 'prices', 'services'));
     }
 
-    public function sendOrder(Request $request)
+    public function sendOrder(SendOrderRequest $request)
     {
         if ($request->ajax()) {
             $name = $request->name ?? "имя не указано";

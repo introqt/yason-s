@@ -154,6 +154,7 @@
             </div>
         </div>
 
+        <div class="alert alert-danger" style="display:none"></div>
         <form method="post" id="contact-us-form">
             @csrf
             <div class="row">
