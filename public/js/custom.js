@@ -57,7 +57,6 @@ $('#send-order-button').click(() => {
           title: 'Успешно!',
           text: 'Мы получили Ваш заказ!',
           type: 'success',
-          confirmButtonText: 'Cool',
         });
       }
     },

@@ -56,7 +56,8 @@
             </div>
         </div>
         <div class="row">
-            <button class="order-button" data-aos="fade-right">Оформить заказ</button>
+            <a class="btn order-button" data-aos="fade-right" href="#contact-us">Оформить заказ</a>
+            {{--<button class="order-button">Оформить заказ</button>--}}
         </div>
     </section>
 </header>

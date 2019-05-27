@@ -134,7 +134,22 @@ header {
   }
 
   .order-button {
+
+    //-webkit-appearance: button;
+    //-moz-appearance: button;
+    //appearance: button;
+    //
+    //text-decoration: none;
+    //
+    //vertical-align: middle;
+    //text-align: center;
+    padding-top: 10px;
     @include gradient-button();
+    //&:hover,
+    //&:focus {
+    //  text-decoration: none;
+    //  outline: 0;
+    //}
   }
 
 }

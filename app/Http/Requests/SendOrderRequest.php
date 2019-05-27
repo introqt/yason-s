@@ -24,7 +24,7 @@ class SendOrderRequest extends FormRequest
     public function rules()
     {
         return [
-            'email' => 'required',
+            'email' => 'email|required',
             'topic' => 'required',
         ];
     }

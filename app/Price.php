@@ -2,21 +2,21 @@
 
 namespace App;
 
-use App\Core\Models\AbstractBaseModel;
+use Illuminate\Database\Eloquent\Model;
 
 
-class Price extends AbstractBaseModel
+class Price extends Model
 {
-    const ORDERING = 'price';
-    const SELECTING = 'price';
-
-    public function ordering(): string
-    {
-        return self::ORDERING;
-    }
-
-    public function selecting(): string
-    {
-        return self::SELECTING;
-    }
+//    const ORDERING = 'price';
+//    const SELECTING = 'price';
+//
+//    public function ordering(): string
+//    {
+//        return self::ORDERING;
+//    }
+//
+//    public function selecting(): string
+//    {
+//        return self::SELECTING;
+//    }
 }
