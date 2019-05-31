@@ -24,7 +24,7 @@
             <nav class="col-8">
                 <ul class="nav justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Главная</a>
+                        <a class="nav-link" href="/">Главная</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#why-we">О нас</a>
@@ -61,39 +61,8 @@
     </section>
 </header>
 
-<section class="bg-red">
+<section class="bg-red" style="margin-top: -200px; height: auto; padding-bottom: 100px;">
     <div class="container">
-        <div class="row why-we justify-content-center" id="why-we">
-            <div class="col-lg-2 col-sm-3">
-                <img src="{{ asset('images/planet.png') }}" alt="Why we" class="why-we--planet" data-aos="fade-right">
-            </div>
-            <div class="col-lg-4 col-sm-7">
-                <h1 class="why-we--heading" data-aos="fade-left">Почему<br>именно мы?</h1>
-            </div>
-        </div>
-
-        <div class="row pluses" data-aos="fade-up">
-            <div class="col-4 pluses--block pluses--block-1">
-                <h3 class="heading">Планирование работы</h3>
-                <p class="text">Мы оптимально распределяем ресурсы для достижения ваших целей в кратчайшие сроки</p>
-            </div>
-            <div class="col-4 pluses--block pluses--block-2">
-                <h3 class="heading">Лучшее качество</h3>
-                <p class="text">Чтобы обеспечить наилучшее качество работы, мы используем современные методологии
-                </p>
-            </div>
-            <div class="col-4 pluses--block pluses--block-3">
-                <h3 class="heading">Доступные цены</h3>
-                <p class="text">Для каждого проекта мы используем экономичные методы калькуляции затрат, что
-                    обеспечивает максимально точную и прозрачную стоимость
-                </p>
-            </div>
-        </div>
-
-        <div class="row" style="position: relative;" data-aos="fade-up-left">
-            <div class="col-4 offset-8 raketa">&nbsp;</div>
-        </div>
-
         <div class="row portfolio" id="portfolio">
             <div class="portfolio-heading col-5" data-aos="zoom-in">
                 <h3 class="portfolio--heading">Наши работы</h3>
@@ -110,29 +79,6 @@
             <iframe src="https://www.youtube.com/embed/Y0vvT2jkkYc" frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
-        </div>
-
-        <div class="row more-examples">
-            <a class="more-examples-button" href="{{ route('portfolio') }}">Смотреть все работы</a>
-        </div>
-    </div>
-
-    <div class="container socials" data-aos="flip-left">
-        <a target="_blank" href="https://www.youtube.com/channel/UCZ0XQth9pMmHF5GTOktvnEA"
-           class="youtube-white-border">
-            <p><strong>Ищите нас в космосе<br>и на Youtube</strong></p>
-            <div class="youtube-icon">
-                <img src="{{ asset('images/youtube.png') }}" alt="Youtube" class="youtube-icon-image">
-            </div>
-            <div class="youtube-cosmonaute">
-                <img src="{{ asset('images/cosmonaut2.png') }}" alt="Cosmonaute">
-            </div>
-        </a>
-        <div class="vk-how">
-            <p class="bluelarge">ИЛИ</p>
-            <p>в других<br>социальных сетях</p>
-            <a href="https://vk.com/webdesigns" data-fancybox="" class="large-blue-but"><img
-                        src="{{ asset('images/vk_ico.png') }}" alt="Vk"></a>
         </div>
     </div>
 
@@ -284,11 +230,12 @@
   $('.portfolio-image').click(function() {
     const id = $(this).data('id');
     $.ajax({
-          url: `${window.location}/get-info/${id}`,
+          url: `/get-info/${id}`,
           type: 'GET',
           success: function(result) {
             $('#exampleModalLabel').text(result.title);
-            $('.modal-body img').attr('src', `${window.location}storage/${result.src}`);
+            $('.modal-body img').
+                attr('src', `${window.location.protocol}/storage/${result.src}`);
           },
         },
     );

@@ -13,6 +13,8 @@
 
 Route::get('/', 'HomePageController@index');
 Route::post('/send-order', 'HomePageController@sendOrder');
+Route::get('/get-info/{id}', 'HomePageController@getPortfolioItem');
+Route::get('/portfolio', 'HomePageController@portfolio')->name('portfolio');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

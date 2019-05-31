@@ -40,4 +40,16 @@ class HomePageController extends Controller
 
         return $data;
     }
+
+    public function getPortfolioItem($id)
+    {
+        return Example::select('id', 'title', 'src')->where('id', $id)->first();
+    }
+
+    public function portfolio(Service $services, Price $prices)
+    {
+        $examples = Example::orderBy('order')->get();
+
+        return view('layouts.portfolio', compact('examples', 'services', 'prices'));
+    }
 }

@@ -2211,9 +2211,6 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 .btn:not(:disabled):not(.disabled) {
   cursor: pointer;
 }
-.btn:not(:disabled):not(.disabled):active, .btn:not(:disabled):not(.disabled).active {
-  background-image: none;
-}
 a.btn.disabled,
 fieldset:disabled a.btn {
   pointer-events: none;
@@ -8364,7 +8361,7 @@ header .cup {
   background-size: contain;
 }
 header .order-button {
-  padding-top: 10px;
+  padding-top: 18px;
   background-image: -moz-linear-gradient(0deg, #b7256e 0%, #f8636b 100%);
   background-image: -webkit-linear-gradient(0deg, #b7256e 0%, #f8636b 100%);
   background-image: -ms-linear-gradient(0deg, #b7256e 0%, #f8636b 100%);
@@ -8388,6 +8385,35 @@ header .order-button:hover {
   cursor: pointer;
   box-shadow: 0px 0px 15px 5px #f8636b;
   transition: 0.2s;
+}
+header .order-button:active {
+  background-image: -moz-linear-gradient(0deg, #b7256e 0%, #f8636b 100%);
+  background-image: -webkit-linear-gradient(0deg, #b7256e 0%, #f8636b 100%);
+  background-image: -ms-linear-gradient(0deg, #b7256e 0%, #f8636b 100%);
+  text-transform: uppercase;
+  width: 208px;
+  height: 60px;
+  color: white;
+  border-radius: 30px;
+  border: 0;
+  box-shadow: 0;
+  -webkit-transition: box-shadow 0.25s linear;
+  -moz-transition: box-shadow 0.25s linear;
+  -ms-transition: box-shadow 0.25s linear;
+  -o-transition: box-shadow 0.25s linear;
+  transition: box-shadow 0.25s linear;
+}
+header .order-button:active:focus, header .order-button:active:active {
+  outline: 0;
+}
+header .order-button:active:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 15px 5px #f8636b;
+  transition: 0.2s;
+}
+header .order-button:hover, header .order-button:focus, header .order-button:active {
+  text-decoration: none !important;
+  outline: 0 !important;
 }
 
 .bg-red {
@@ -8553,6 +8579,9 @@ header .order-button:hover {
 .bg-red .more-examples-button {
   display: block;
   margin: auto;
+  color: white !important;
+  padding-top: 18px;
+  text-align: center;
   background-image: -moz-linear-gradient(0deg, #b7256e 0%, #f8636b 100%);
   background-image: -webkit-linear-gradient(0deg, #b7256e 0%, #f8636b 100%);
   background-image: -ms-linear-gradient(0deg, #b7256e 0%, #f8636b 100%);
@@ -8576,6 +8605,9 @@ header .order-button:hover {
   cursor: pointer;
   box-shadow: 0px 0px 15px 5px #f8636b;
   transition: 0.2s;
+}
+.bg-red .more-examples-button:hover {
+  text-decoration: none !important;
 }
 .bg-red .socials {
   margin-top: 200px;

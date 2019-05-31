@@ -134,22 +134,17 @@ header {
   }
 
   .order-button {
-
-    //-webkit-appearance: button;
-    //-moz-appearance: button;
-    //appearance: button;
-    //
-    //text-decoration: none;
-    //
-    //vertical-align: middle;
-    //text-align: center;
-    padding-top: 10px;
+    padding-top: 18px;
     @include gradient-button();
-    //&:hover,
-    //&:focus {
-    //  text-decoration: none;
-    //  outline: 0;
-    //}
+    &:active{
+      @include gradient-button();
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: none !important;
+      outline: 0 !important;
+    }
   }
 
 }
@@ -340,8 +335,15 @@ header {
     &-button {
       display: block;
       margin: auto;
+      color: white !important;
+      padding-top: 18px;
+      text-align: center;
 
       @include gradient-button();
+
+      &:hover {
+        text-decoration: none !important;
+      }
     }
   }
 
